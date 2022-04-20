@@ -93,6 +93,7 @@ int main()
      amount+=cost*quantity;
     printf("Would You like to order something else? (y/n)");
     char yesno;
+    scanf("%c",&yesno);
     if (yesno=='y') 
         goto level;
     else
