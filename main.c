@@ -66,7 +66,7 @@ int main()
      int item_code;
      scanf("%d",&item_code);
      
-     float cost, amount;
+     float cost, amount=0.00;
      if(item_code==01) cost=70.00;
      else if(item_code==02) cost=60.00;
      else if(item_code==03) cost=70.00;
@@ -90,7 +90,14 @@ int main()
      int quantity;
      scanf("%d",&quantity);
      
-     amount=cost*quantity;
+     amount+=cost*quantity;
+    printf("Would You like to order something else? (y/n)");
+    char yesno;
+    if (yesno=='y') 
+        goto level;
+    else
+        exit(0);
+    
      
      printf("Thanks for ordering\nYour Bill is %.2f\nEnjoy your Meal\n",amount);
      exit (0);
