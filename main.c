@@ -3,9 +3,13 @@
 int main()
 {
     printf("WELCOME To FOODIE'S CORNER\n\n");
-    
+    char yesno;
+    printf("How many items would you like to order?\n");
+    int n;
+    scanf("%d",&n);
+    float amount=0.00;
     int a;
-    level:
+    while(n--){
     printf("WHAT WOULD YOU LIKE TO DEVOUR\n");
     printf("Enter 1 for STARTERS\n");
     printf("Enter 2 for SOUPS\n");
@@ -66,7 +70,7 @@ int main()
      int item_code;
      scanf("%d",&item_code);
      
-     float cost, amount=0.00;
+     float cost;
      if(item_code==01) cost=70.00;
      else if(item_code==02) cost=60.00;
      else if(item_code==03) cost=70.00;
@@ -91,16 +95,8 @@ int main()
      scanf("%d",&quantity);
      
      amount+=cost*quantity;
-    printf("Would You like to order something else? (y/n)");
-    char yesno;
-    scanf("%c",&yesno);
-    if (yesno=='y') 
-        goto level;
-    else
-        exit(0);
-    
-     
-     printf("Thanks for ordering\nYour Bill is %.2f\nEnjoy your Meal\n",amount);
-     exit (0);
+    }
+    printf("\nThanks for ordering\nYour Bill is %.2f\nEnjoy your Meal\n",amount);
+    amount=0.00;
     return 0;
 }
